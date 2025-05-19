@@ -79,6 +79,59 @@
     }
   </style>
 </head>
+<style>
+  /* Container for video and overlay */
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* put behind all content */
+  }
+
+  /* Video fills the screen */
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px); /* optional: slight blur */
+  }
+
+  /* White overlay with 30% opacity */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* 30% white with transparency */
+    z-index: 1;
+  }
+
+  /* Your content over the video */
+  .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #000;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+</style>
+
+<div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="videos/karbala.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay"></div>
+</div>
 <body>
 
   <header>
@@ -111,55 +164,6 @@
     <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
   </div>
-<style>
-  /* Container for video and overlay */
-  .video-background {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* full viewport height */
-    overflow: hidden;
-  }
-
-  /* Video fills the container */
-  .video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    object-fit: cover;
-  }
-
-  /* White overlay with 20% opacity */
-  .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0.2; /* 20% opacity */
-    z-index: 2;
-  }
-
-  /* Your content above overlay */
-  .content {
-    position: relative;
-    z-index: 3;
-    color: black; /* or whatever fits */
-  }
-</style>
-
-<div class="video-background">
-  <video autoplay muted loop>
-    <source src="imamhussainas.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <div class="video-overlay"></div>
 
   <footer>
     “In every tent of Hussain (ع), sincerity matters more than size.”
