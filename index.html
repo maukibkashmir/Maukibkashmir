@@ -55,34 +55,6 @@
   </video>
   <div class="video-overlay"></div>
 </div>
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="hussain.mp3" type="audio/mp3" />
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Script -->
-  <script>
-    const music = document.getElementById("bg-music");
-    music.volume = 0.1;
-
-    // Autoplay after first user interaction
-    document.addEventListener("click", function () {
-      if (music.paused) music.play();
-    }, { once: true });
-
-    function playMusic() {
-      music.play();
-    }
-
-    function pauseMusic() {
-      music.pause();
-    }
-
-    function toggleMute() {
-      music.muted = !music.muted;
-    }
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maukib Kashmir – Coming Soon</title>
