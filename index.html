@@ -130,17 +130,30 @@
       margin-top: 30px;
       margin-bottom: 20px;
     }
+     .logo {
+      width: 160px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        width: 120px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 100px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-.logo {
-  width: 160px;        /* Adjust size as needed */
-  height: auto;        /* This keeps the aspect ratio */
-  display: block;
-  margin: 0 auto;
-}
     <img src="mylogo.png" alt="Maukib Kashmir Logo" class="logo" />
   </header>
 
